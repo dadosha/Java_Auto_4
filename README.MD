@@ -1,1 +1,1 @@
-# Java Autotests 4 Netology
+# Java Autotests 4 Netology [![Java CI with Gradle](https://github.com/dadosha/Java_Auto_4/actions/workflows/gradle.yml/badge.svg)](https://github.com/dadosha/Java_Auto_4/actions/workflows/gradle.yml)
