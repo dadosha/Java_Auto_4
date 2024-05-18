@@ -5,8 +5,7 @@ import ru.netology.autojava4.GenerateDate;
 import java.time.Duration;
 import java.util.Random;
 
-import static com.codeborne.selenide.Condition.exactText;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.withText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -25,6 +24,7 @@ public class TestApp {
         $("[data-test-id='phone'] input").setValue("+79999999999");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
+        $("button.button_view_extra .spin_visible").shouldBe(visible);
         $(withText("Встреча успешно забронирована")).shouldBe(visible, Duration.ofSeconds(15));
     }
 
@@ -40,6 +40,7 @@ public class TestApp {
         $("[data-test-id='phone'] input").setValue("+79999999999");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
+        $("button.button_view_extra .spin_visible").shouldBe(visible);
         $(withText("Встреча успешно забронирована")).shouldBe(visible, Duration.ofSeconds(15));
     }
 
@@ -56,6 +57,7 @@ public class TestApp {
         $("[data-test-id='phone'] input").setValue("+79999999999");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
+        $("button.button_view_extra .spin_visible").shouldBe(visible);
         $(withText("Встреча успешно забронирована")).shouldBe(visible, Duration.ofSeconds(15));
     }
 }
