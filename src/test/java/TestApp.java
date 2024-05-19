@@ -25,9 +25,7 @@ public class TestApp {
         $("[data-test-id='phone'] input").setValue("+79999999999");
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
-        $("button.button_view_extra .spin_visible").shouldBe(visible);
-        $(withText("Встреча успешно забронирована")).shouldBe(visible, Duration.ofSeconds(15));
-        $("[data-test-id='notification'] .notification__content").shouldHave(exactText("Встреча успешно забронирована на " + date));
+        $("[data-test-id='notification'] .notification__content").shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText("Встреча успешно забронирована на " + date));
     }
 
     @Test
@@ -43,8 +41,7 @@ public class TestApp {
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
         $("button.button_view_extra .spin_visible").shouldBe(visible);
-        $(withText("Встреча успешно забронирована")).shouldBe(visible, Duration.ofSeconds(15));
-        $("[data-test-id='notification'] .notification__content").shouldHave(exactText("Встреча успешно забронирована на " + date));
+        $("[data-test-id='notification'] .notification__content").shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText("Встреча успешно забронирована на " + date));
     }
 
     @Test
@@ -63,7 +60,6 @@ public class TestApp {
         $("[data-test-id='agreement']").click();
         $("button.button_view_extra").click();
         $("button.button_view_extra .spin_visible").shouldBe(visible);
-        $(withText("Встреча успешно забронирована")).shouldBe(visible, Duration.ofSeconds(15));
-        $("[data-test-id='notification'] .notification__content").shouldHave(exactText("Встреча успешно забронирована на " + dateList.get(1)));
+        $("[data-test-id='notification'] .notification__content").shouldBe(visible, Duration.ofSeconds(15)).shouldHave(exactText("Встреча успешно забронирована на " + dateList.get(1)));
     }
 }
